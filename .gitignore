@@ -1,1 +1,4 @@
-modules/
+modules/*
+.tmp
+.vagrant
+.librarian
