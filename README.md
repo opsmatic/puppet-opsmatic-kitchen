@@ -1,7 +1,7 @@
 To get this going
 
-install puppet-librarian
+First install the puppet-librarian gem
 
-```librarian-puppet install```
-```vagrant up```
+    librarian-puppet install
+    vagrant up
 
