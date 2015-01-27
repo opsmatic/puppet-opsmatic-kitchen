@@ -2,3 +2,7 @@ modules/*
 .tmp
 .vagrant
 .librarian
+.kitchen/
+.kitchen.local.yml
+.tmp/
+modules/

@@ -1,0 +1,36 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: puppet_apply
+  manifests_path: manifests
+  modules_path: modules
+  hiera_data_path: hieradata
+  manifest: default.pp
+
+platforms:
+  - name: opscode-ubuntu1404
+    driver_plugin: vagrant
+    driver_config:
+      box: opscode-ubuntu-14.04
+      box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box
+  - name: opscode-centos66
+    driver_plugin: vagrant
+    driver_config:
+      box: opscode-centos-6.6 
+      box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.6_chef-provisionerless.box
+  - name: opscode-centos70
+    driver_plugin: vagrant
+    driver_config:
+      box: opscode-centos-7.0 
+      box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-7.0_chef-provisionerless.box
+  - name: opscode-debian77
+    driver_plugin: vagrant
+    driver_config:
+      box: opscode-debian-7.7
+      box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.7_chef-provisionerless.box
+
+suites:
+  - name: default
+    manifest: default.pp
