@@ -1,7 +1,12 @@
-To get this going
+Run `kitchen` commands for testing `puppet-opsmatic` here just like you would in
+any other project. Note that `Puppetfile` and `Gemfile` have dependencies on
+things that should be checked out locally.
 
-First install the puppet-librarian gem
+### Getting Started
 
-    librarian-puppet install
-    vagrant up
+```
+bundle install --path vendor/bundle
+bundle exec kitchen list
+```
 
+Yes, you will have to keep typing `bundle exec` every time. Enjoy.
